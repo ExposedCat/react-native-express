@@ -1,0 +1,9 @@
+{
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
+}

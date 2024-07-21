@@ -1,0 +1,30 @@
+{
+  "name": "fitty-api",
+  "version": "1.0.0",
+  "description": "Fitty API",
+  "main": "build/index.js",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.12.11",
+    "@types/node-schedule": "^2.1.7",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "compile": "tsc && mkdir -p build/uploads",
+    "bg:start": "npm run compile && pm2 start build/index.js --name fitty",
+    "bg:restart": "pm2 restart fitty",
+    "bg:logs": "pm2 logs fitty --lines 10000 -f",
+    "start": "npm run compile && node ."
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.6.1"
+  },
+  "type": "module"
+}
